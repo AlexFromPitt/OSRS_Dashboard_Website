@@ -1,0 +1,8 @@
+<button [type]="type" class="app_button">
+    <ng-container *ngIf="icon">
+        <i class="material-icons" *ngIf="icon">{{ icon }}</i>
+    </ng-container>
+    <ng-container *ngIf="buttonText">
+        <span>{{ buttonText }}</span>
+    </ng-container>
+</button>

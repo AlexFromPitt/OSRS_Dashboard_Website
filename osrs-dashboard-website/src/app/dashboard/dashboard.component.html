@@ -1,0 +1,4 @@
+<div class="dashboard_container_foundation">
+    <app-display-section [ngStyle]="getDisplaySectionStyle()"></app-display-section>
+    <app-filter-section [ngStyle]="getFilterSectionStyle()" (buttonClicked)="onFilterButtonClicked($event)"></app-filter-section>
+</div>

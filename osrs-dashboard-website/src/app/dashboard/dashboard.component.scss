@@ -1,0 +1,23 @@
+div.dashboard_container_foundation {
+    display: flex;
+    background-color: #172136;
+    height: 100%;
+    width: 100%;
+    border: 1px;
+}
+
+.filter_button {
+    height:fit-content;
+    justify-content: right;
+}
+
+app-display-section {
+    width: 95%;
+}
+
+app-filter-section {
+    width: 5%;
+    background-color: #071022;
+    display: flex;
+    justify-content: center;
+}

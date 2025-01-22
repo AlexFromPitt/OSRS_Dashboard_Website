@@ -1,0 +1,9 @@
+<div class="filter_container">
+    <app-button class="filter_button" (click)="onFilterButtonClick()" icon="filter"></app-button>
+    <ng-container *ngIf="showFilter">
+        <span class="filter_text">What would you like to filter on?</span>
+        <app-button class="filter_button" buttonText="Items"></app-button>
+        <app-button class="filter_button" buttonText="Monsters"></app-button>
+        <app-button class="filter_button" buttonText="Players"></app-button>
+    </ng-container>
+</div>
