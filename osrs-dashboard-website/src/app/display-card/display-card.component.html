@@ -1,3 +1,8 @@
-<div>
-    <img [src]="image">
+<div class="display_info_container">
+    <ng-container *ngIf="itemInfoData">
+        <h3>{{ itemInfoData.name }}</h3>
+        <p>ID: {{ itemInfoData.id }}</p>
+        <p>Description: {{ itemInfoData.description }}</p>
+        <img [src]="itemInfoData.icon">
+    </ng-container>
 </div>

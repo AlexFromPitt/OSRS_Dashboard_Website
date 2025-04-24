@@ -1,4 +1,8 @@
 div {
     width: fit-content;
     height: fit-content;
+
+    &.display_info_container {
+        color: #8cabe6 !important;
+    }
 }
