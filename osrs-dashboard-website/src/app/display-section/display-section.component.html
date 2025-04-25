@@ -1,5 +1,8 @@
 <div class="display_foundation">
-    <input [(ngModel)]="searchTerm" name="search" placeholder="Search..." />
-    <button (click)="onItemSearch()">Search</button>
+    <section class="search_box">
+        <span>Item Search:</span>
+        <input [(ngModel)]="searchTerm" name="search" placeholder="Search..." />
+        <button (click)="onItemSearch()">Search</button>
+    </section>
     <app-display-card [itemInfoData]="itemInfo"></app-display-card>
 </div>

@@ -1,8 +1,10 @@
-<div class="display_info_container">
-    <ng-container *ngIf="itemInfoData">
-        <h3>{{ itemInfoData.name }}</h3>
-        <p>ID: {{ itemInfoData.id }}</p>
-        <p>Description: {{ itemInfoData.description }}</p>
-        <img [src]="itemInfoData.icon">
-    </ng-container>
-</div>
+<ng-container *ngIf="itemInfoData">
+    <div class="item_info_container">
+        <img [src]="itemInfoData.iconLarge">
+        <div class="item_info_text">
+            <span>{{ itemInfoData.name }}</span>
+            <p>ID: {{ itemInfoData.id }}</p>
+            <p>Description: {{ itemInfoData.description }}</p>
+        </div>
+    </div>
+</ng-container>

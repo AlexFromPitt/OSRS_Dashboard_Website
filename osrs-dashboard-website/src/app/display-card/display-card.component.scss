@@ -2,7 +2,23 @@ div {
     width: fit-content;
     height: fit-content;
 
-    &.display_info_container {
-        color: #8cabe6 !important;
+    &.item_info_container {
+        padding: 10px;
+        border-radius: 10px;
+        border-color: #596e96;
+        border-width: 2px;
+        border-style: solid;
+        height: fit-content;
+        width: auto;
+        color: #cbd9f4 !important;
+        display: flex;
+
+        img {
+            width: fit-content;
+        }
+    }
+
+    .item_info_text {
+
     }
 }
