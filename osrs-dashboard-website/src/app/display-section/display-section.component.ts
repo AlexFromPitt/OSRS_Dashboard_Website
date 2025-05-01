@@ -4,17 +4,18 @@ import { ItemService } from '../services/item.service';
 import { ItemInfoData } from '../models/item-info-data.model';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-display-section',
   standalone: true,
-  imports: [DisplayCardComponent, FormsModule, HttpClientModule],
+  imports: [DisplayCardComponent, FormsModule, HttpClientModule, CommonModule],
   templateUrl: './display-section.component.html',
   styleUrl: './display-section.component.scss'
 })
 export class DisplaySectionComponent {
   searchTerm: string = '';
-  itemInfo: ItemInfoData | null = null;
+  itemInfoList: ItemInfoData[] | null = null;
 
   constructor(private itemService: ItemService) { }
 
@@ -31,9 +32,8 @@ export class DisplaySectionComponent {
 
   onItemSearch(): void {
     this.itemService.getItemInfoData(this.searchTerm).subscribe({
-      next: (response: ItemInfoData) => {
-        console.log(`${response.name} - ${response.id} - ${response.description}`);
-        this.itemInfo = response;
+      next: (response: ItemInfoData[]) => {
+        this.itemInfoList = response;
       },
       error: () => {
         console.log("Could not find item data for " + this.searchTerm);

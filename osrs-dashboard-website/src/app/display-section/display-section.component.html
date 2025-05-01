@@ -4,5 +4,10 @@
         <input [(ngModel)]="searchTerm" name="search" placeholder="Search..." />
         <button (click)="onItemSearch()">Search</button>
     </section>
-    <app-display-card [itemInfoData]="itemInfo"></app-display-card>
+    <section *ngIf="itemInfoList && itemInfoList.length > 0" class="results_section">
+        <app-display-card
+          *ngFor="let item of itemInfoList"
+          [itemInfoData]="item">
+        </app-display-card>
+      </section>
 </div>

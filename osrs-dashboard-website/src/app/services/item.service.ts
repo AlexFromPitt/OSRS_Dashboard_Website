@@ -18,11 +18,11 @@ export class ItemService {
     return this.http.get(`${this.loadItemIdsUrl}/load`, { responseType: 'text' });
   }
 
-  getItemInfoData(itemName: string): Observable<ItemInfoData> {
-    return this.http.get<ItemInfoData>(`${this.getItemInfoDataUrl}/${itemName}`)
+  getItemInfoData(itemName: string): Observable<ItemInfoData[]> {
+    return this.http.get<ItemInfoData[]>(`${this.getItemInfoDataUrl}/${itemName}`)
   }
 
-  getItemPriceData(itemName: string): Observable<ItemPriceData> {
-    return this.http.get<ItemPriceData>(`${this.getItemPriceDataUrl}/${itemName}`)
+  getItemPriceData(itemName: string): Observable<ItemPriceData[]> {
+    return this.http.get<ItemPriceData[]>(`${this.getItemPriceDataUrl}/${itemName}`)
   }
 }
