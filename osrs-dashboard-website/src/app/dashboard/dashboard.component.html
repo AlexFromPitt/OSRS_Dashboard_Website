@@ -1,4 +1,17 @@
 <div class="dashboard_container_foundation">
-    <app-display-section [ngStyle]="getDisplaySectionStyle()"></app-display-section>
-    <app-filter-section [ngStyle]="getFilterSectionStyle()" (buttonClicked)="onFilterButtonClicked($event)"></app-filter-section>
-</div>
+    <ul class="nav-pills">
+      <li class="nav-item">
+        <a routerLink="/items" routerLinkActive="active-tab" class="nav-link">Items</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/skills" routerLinkActive="active-tab" class="nav-link">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/activities" routerLinkActive="active-tab" class="nav-link">Activities</a>
+      </li>
+    </ul>
+  
+    <div class="tab-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

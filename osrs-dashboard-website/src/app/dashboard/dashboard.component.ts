@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { FilterSectionComponent } from '../filter-section/filter-section.component';
-import { DisplaySectionComponent } from '../display-section/display-section.component';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from "../button/button.component";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [FilterSectionComponent, DisplaySectionComponent, CommonModule, ButtonComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './dashboard.component.html',
   styleUrl: `./dashboard.component.scss`
 })

@@ -1,15 +1,14 @@
 import { Component, Input } from '@angular/core';
-import { ItemInfoData } from '../models/item-info-data.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-display-card',
+  selector: 'app-item-display-card',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './display-card.component.html',
-  styleUrl: './display-card.component.scss'
+  templateUrl: './item-display-card.component.html',
+  styleUrl: './item-display-card.component.scss'
 })
-export class DisplayCardComponent {
+export class ItemDisplayCardComponent {
   image: string = '';
   @Input() itemInfoData: any;
 

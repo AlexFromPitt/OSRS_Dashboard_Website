@@ -1,0 +1,18 @@
+<div class="item_component_foundation">
+    <form (ngSubmit)="onItemSearch()" #searchForm="ngForm" class="search_box">
+        <span>Item Search:</span>
+        <input
+            [(ngModel)]="searchTerm"
+            name="search"
+            required
+            placeholder="Search..."
+        />
+        <button type="submit">Search</button>
+    </form>
+    <section *ngIf="itemInfoList && itemInfoList.length > 0" class="results_section">
+        <app-item-display-card
+            *ngFor="let item of itemInfoList"
+            [itemInfoData]="item">
+        </app-item-display-card>
+    </section>
+</div>
