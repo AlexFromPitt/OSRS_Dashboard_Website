@@ -4,13 +4,14 @@ import { ItemService } from '../services/item.service';
 import { ItemInfoData } from '../models/item-info-data.model';
 import { ItemDisplayCardComponent } from './item-display-card/item-display-card.component';
 import { FormsModule } from '@angular/forms';
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-items',
   standalone: true,
-  imports: [CommonModule, ItemDisplayCardComponent, FormsModule],
+  imports: [CommonModule, ItemDisplayCardComponent, FormsModule, ButtonComponent],
   templateUrl: './items.component.html',
-  styleUrl: './items.component.css'
+  styleUrl: './items.component.scss'
 })
 export class ItemsComponent {
   itemInfoList: ItemInfoData[] | null = null;

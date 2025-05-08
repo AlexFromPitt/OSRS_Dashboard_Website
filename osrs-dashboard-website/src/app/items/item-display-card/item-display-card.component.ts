@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ItemInfoData } from '../../models/item-info-data.model';
 
 @Component({
   selector: 'app-item-display-card',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ItemDisplayCardComponent {
   image: string = '';
-  @Input() itemInfoData: any;
+  itemInfoData = input<ItemInfoData>();
 
   constructor() {}
 
